@@ -1,0 +1,57 @@
+﻿--- First Route ---
+    app.config(['$routeProvider',
+        function ($routeProvider) {
+            $routeProvider
+                .when("/searchByTitle", {
+                    templateUrl: "app/movies/movieListView.html",
+                    controller: "MovieListCtrl as vm"
+                })
+        }]);
+
+
+
+--- Full Route ---
+    app.config(['$routeProvider',
+        function ($routeProvider) {
+            $routeProvider
+                .when("/", {
+                    templateUrl: "app/welcomeView.html"
+                })
+                .when("/searchByTitle", {
+                    templateUrl: "app/movies/movieListView.html",
+                    controller: "MovieListCtrl as vm"
+                })
+                .when("/showDetail/:movieId", {
+                    templateUrl: "app/movies/movieDetailView.html",
+                    controller: "MovieDetailCtrl as vm"
+                })
+				.otherwise("/")
+        }]);
+
+--- Menu ---
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <a class="navbar-brand" href="#">InStep Movie Hunter</a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle"
+                        data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar">a</span>
+                    <span class="icon-bar">b</span>
+                    <span class="icon-bar">c</span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a ng-href="#searchByTitle">Search by Title</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
+
+--- Link to Detail Page ---
+<a ng-href="#showDetail/{{movie.movieId}}">{{ movie.title}}</a>
