@@ -13,21 +13,21 @@
             {
                 title: 'The Fellowship of the Ring',
                 director: 'Jackson',
-                date: '2001-12-19',
+                releaseDate: '2001-12-19',
                 imageurl: 'http://www.coverwhiz.com/content/The-Lord-Of-The-Rings-The-Fellowship-Of-The-Ring_small.jpg',
                 mpaa: 'pg-13'
             },
              {
                  title: 'The Two Towers',
                  director: 'Jackson',
-                 date: '2002-12-18',
+                 releaseDate: '2002-12-18',
                  imageurl: 'http://www.coverwhiz.com/content/The-Lord-Of-The-Rings-The-Two-Towers_small.jpg',
                  mpaa: 'pg-13'
              },
 		     {
 		         title: 'The Point',
 		         director: 'Wolf',
-		         date: '1971-02-02',
+		         releaseDate: '1971-02-02',
 		         imageurl: '',
 		         mpaa: 'nr'
 		     }
