@@ -25,7 +25,7 @@
                     templateUrl: "app/movies/movieDetailView.html",
                     controller: "MovieDetailCtrl as vm"
                 })
-				.otherwise("/")
+				.otherwise("/");
         }]);
 
 --- Menu ---
