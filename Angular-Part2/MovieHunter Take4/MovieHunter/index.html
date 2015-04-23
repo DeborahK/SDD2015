@@ -24,6 +24,12 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a ng-href="#searchByTitle">Search by Title</a></li>
+                    <li>
+                        <a ng-href="#editMovie/0">
+                            <i class="glyphicon glyphicon-plus"></i>
+                            Add Movie
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -37,6 +43,7 @@
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-route.js"></script>
     <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-messages.js"></script>
 
     <!-- Application Scripts -->
     <script src="app/app.js"></script>
@@ -46,5 +53,6 @@
     <!-- Controllers -->
     <script src="app/movies/movieListCtrl.js"></script>
     <script src="app/movies/movieDetailCtrl.js"></script>
+    <script src="app/movies/movieEditCtrl.js"></script>
 </body>
 </html>

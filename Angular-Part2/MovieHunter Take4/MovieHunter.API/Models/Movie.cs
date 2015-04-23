@@ -8,14 +8,15 @@ namespace MovieHunter.API.Models
     /// </summary>
     public class Movie
     {
-        public string description { get; set; }
-        public string director { get; set; }
-        public string imdbLink { get; set; }
-        public string imageurl { get; set; }
-        public int movieId { get; set; }
-        public string mpaa { get; set; }
-        public DateTime releaseDate { get; set; }
-        public string title { get; set; }
+        public string Description { get; set; }
+        public string Director { get; set; }
+        public string ImdbLink { get; set; }
+        public string Imageurl { get; set; }
+        public int MovieId { get; set; }
+        public string Mpaa { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public decimal? StarRating { get; set; }
+        public string Title { get; set; }
 
     }
 }

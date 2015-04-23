@@ -1,7 +1,7 @@
 ﻿(function () {
     "use strict";
 
-    var app = angular.module("movieHunter", ["ngRoute", "common.services"]);
+    var app = angular.module("movieHunter", ["ngRoute", "common.services", "ngMessages"]);
 
     app.config(["$routeProvider",
         function ($routeProvider) {
@@ -16,6 +16,10 @@
                 .when("/showDetail/:movieId", {
                     templateUrl : "app/movies/movieDetailView.html",
                     controller : "MovieDetailCtrl as vm"
+                })
+                .when("/editMovie/:movieId", {
+                    templateUrl: "app/movies/movieEditView.html",
+                    controller: "MovieEditCtrl as vm"
                 })
                 .otherwise("/");
         }]);

@@ -500,6 +500,13 @@
             <returns></returns>
             <example>GET api/movies/5</example>
         </member>
+        <member name="M:MovieHunter.API.Controllers.MoviesController.Post(MovieHunter.API.Models.Movie)">
+            <summary>
+            Saves a move passed in as part of a POST request
+            </summary>
+            <param name="movie"></param>
+            <returns></returns>
+        </member>
         <member name="T:MovieHunter.API.Models.Movie">
             <summary>
             Defines a single movie
@@ -509,6 +516,12 @@
             <summary>
             Manages the set of movies.
             </summary>
+        </member>
+        <member name="M:MovieHunter.API.Models.MovieRepository.Create">
+            <summary>
+            Creates a new product with default values
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:MovieHunter.API.Models.MovieRepository.Retrieve">
             <summary>
@@ -520,7 +533,7 @@
             <summary>
             Saves a single movie back to the repository.
             </summary>
-            <param name="value"></param>
+            <param name="movie"></param>
         </member>
     </members>
 </doc>

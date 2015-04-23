@@ -64,32 +64,6 @@
                 </div>
 
                 <div class="form-group"
-                     ng-class="{'has-error':movieForm.inputStarRating.$invalid &&
-                                    movieForm.inputStarRating.$dirty}">
-                    <label class="col-md-2 control-label"
-                           for="inputStarRating">Star Rating (1-5)</label>
-
-                    <div class="col-md-8">
-                        <input class="form-control"
-                               id="inputStarRating"
-                               name="inputStarRating"
-                               placeholder="Rating (required)"
-                               type="number"
-                               ng-model="vm.movie.starRating"
-                               required
-                               min="1"
-                               max="5" />
-                    </div>
-                    <span class="help-block">
-                        <span ng-messages="movieForm.inputStarRating.$error">
-                            <span ng-message="required">Please enter a number between 1 and 5</span>
-                            <span ng-message="min">Please enter a number between 1 and 5</span>
-                            <span ng-message="max">Please enter a number between 1 and 5</span>
-                        </span>
-                    </span>
-                </div>
-
-                <div class="form-group"
                      ng-class="{'has-error':movieForm.inputDescription.$invalid &&
                                     movieForm.inputDescription.$dirty}">
                     <label class="col-md-2 control-label"
