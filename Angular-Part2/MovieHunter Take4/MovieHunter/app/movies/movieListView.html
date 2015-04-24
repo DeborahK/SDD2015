@@ -1,6 +1,7 @@
 ﻿<div class="panel panel-primary">
     <div class="panel-heading">
-        <h2 class="title">{{vm.title}}</h2>
+        <!-- One Time Bindings for improved performance -->
+        <h2 class="title">{{::vm.title}}</h2>
     </div>
 
     <div class="panel-body">
@@ -36,17 +37,17 @@
                     <tr ng-repeat="movie in vm.movies | filter : {title:listFilter} | orderBy : 'title'">
                         <td>
                             <img ng-if="vm.showImage" style="width:50px;margin:2px"
-                                 ng-src="{{movie.imageurl}}" title="{{movie.title}}">
+                                 ng-src="{{::movie.imageurl}}" title="{{::movie.title}}">
                         </td>
                         <td>
-                            <a ng-href="#showDetail/{{movie.movieId}}">{{ movie.title}}</a>
+                            <a ng-href="#showDetail/{{::movie.movieId}}">{{ ::movie.title}}</a>
                         </td>
-                        <td>{{ movie.director }}</td>
-                        <td>{{ movie.releaseDate | date }}</td>
-                        <td>{{ movie.mpaa | uppercase}}</td>
+                        <td>{{ ::movie.director }}</td>
+                        <td>{{ ::movie.releaseDate | date }}</td>
+                        <td>{{ ::movie.mpaa | uppercase}}</td>
                         <td>
                             <a class="btn btn-primary"
-                               ng-href="#editMovie/{{movie.movieId}}">
+                               ng-href="#editMovie/{{::movie.movieId}}">
                                 Edit
                             </a>
                         </td>
