@@ -12,7 +12,7 @@
         var vm = this;
 
         vm.movieId = $routeParams.movieId;
-        vm.movie = '';
+        vm.movie = "";
 
         movieResource.get({ id: vm.movieId },
             function (data) {
